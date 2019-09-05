@@ -1,0 +1,134 @@
+// Tablets & Small Laptops
+@media screen and (max-width: 800px) {
+  header {
+    h1 {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
+    .icons {
+      display: none;
+    }
+  }
+}
+
+// Smartphones
+@media screen and (max-width: 500px) {
+  body {
+    margin: 20px 40px;
+  }
+
+  header {
+
+    h1 {
+      display: flex;
+      flex-wrap: wrap;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    .icons {
+      display: none;
+    }
+
+    .menu-btn {
+      left: 30px;
+      top: 20px;
+
+      .btn-line {
+        margin: 0 0 3px 0;
+      }
+    }
+  }
+
+  section {
+    margin: 50px 5px;
+
+    #samples {
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 50px;
+
+      img {
+        height: 350px;
+        opacity: 1;
+        transform: scale(1);
+
+        &:hover {
+          opacity: 0.8;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #porfolio-samples {
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 50px;
+
+      img {
+        height: 300px;
+        opacity: 1;
+        transform: scale(1);
+
+        &:hover {
+          opacity: 0.8;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    a {
+      margin: 30px 0;
+      padding: 5px;
+
+      &:hover {
+        padding: 10px;
+      }
+    }
+
+  }
+
+  section #clients {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+
+  #portfolio,
+  #about {
+    ::after {
+      left: 46%;
+    }
+  }
+
+  #portfolio-menu {
+    padding: 30px 0 0 0;
+  }
+
+  main#contact {
+    margin-top: 30px;
+
+    .lg-heading {
+      font-size: 2rem;
+
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    .boxes {
+      div {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  footer {
+    margin: 30px 0 0 0;
+
+    p {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}

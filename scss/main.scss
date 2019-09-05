@@ -1,0 +1,278 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 40px 60px;
+  box-sizing: border-box;
+}
+
+a.current {
+  color: $secondary-color;
+}
+
+header {
+  display: grid;
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+  }
+
+  .icons {
+    position: relative;
+    top: -40px;
+    justify-self: right;
+    margin: 0 0 5px 0;
+    padding: 0 0 10px 0;
+
+    a {
+      padding: 0 5px;
+      color: $primary-color;
+    }
+  }
+
+  .menu-btn {
+    position: absolute;
+    z-index: 3;
+    left: 60px;
+    top: 50px;
+    cursor: pointer;
+
+    .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: $primary-color;
+    }
+  }
+}
+
+#nav-menu {
+  nav {
+    ul {
+      padding: 0%;
+
+      li {
+        list-style-type: none;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba($primary-color, 0.1);
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#portfolio,
+#about {
+  text-align: center;
+  text-transform: uppercase;
+
+  h3 {
+    font-size: 1.5rem;
+    color: $secondary-color;
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    left: 48.5%;
+    border-bottom: 3px solid $primary-color;
+    width: 30px;
+    height: 3px;
+    margin-top: 35px;
+  }
+}
+
+#portfolio-menu {
+  padding: 50px 0 10px 0;
+
+  nav {
+    ul {
+      padding: 0%;
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 5px;
+
+        a {
+          text-decoration: none;
+          color: $primary-color;
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+section {
+  text-align: center;
+
+  #samples {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+
+    img {
+      height: 250px;
+      width: 100%;
+      opacity: 0.8;
+      transform: scale(0.95);
+      transition: all 0.5s;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  #porfolio-samples {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+
+    img {
+      height: 200px;
+      width: 100%;
+      opacity: 0.8;
+      transform: scale(1);
+      transition: ease-in-out 0.5s;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin: 50px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 3px $primary-color solid;
+    border-radius: 5%;
+    @include easeOut;
+
+    &:hover {
+      padding: 10px 15px;
+      background: $secondary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+section #clients {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+
+  img {
+    height: 150px;
+    width: 100%;
+    opacity: 0.8;
+    @include easeOut;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+main#page-content {
+  margin: 50px 0;
+  line-height: 1.7;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  p#lead {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+main#contact {
+  .lg-heading {
+    font-size: 3rem;
+  }
+
+  .sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 0;
+  }
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+      font-size: 2rem;
+      border: 3px $primary-color solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $secondary-color;
+        color: $primary-color;
+
+        span {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .icons {
+    text-align: center;
+
+    a {
+      padding: 0 5px;
+      color: $primary-color;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin: 50px 0 0 0;
+
+  p {
+    font-weight: bold;
+  }
+}
+
+
+@import "mobile";
